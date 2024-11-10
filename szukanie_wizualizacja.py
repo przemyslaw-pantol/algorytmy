@@ -12,11 +12,7 @@ def file_read(input_file):
     return lista
 
 def lista_filtered(char, list):
-    for group in list:
-        if group[0][0] == char:
-            group.sort()
-            return group
-    return False
+    return  list[ord(char)-97]
 
 file = file_read(FILE_PATH)
 file.sort()
