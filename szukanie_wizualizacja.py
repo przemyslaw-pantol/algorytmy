@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import random
 from functools import reduce
 
-# Ścieżka do pliku z danymi tekstowymi
+# Ścieżka do pliku z danymi tekstowym
 
 FILE_PATH = "filtered_words.txt"
 
