@@ -14,7 +14,14 @@ def add_row(matrix):
     matrix.append([0]*len(matrix[0]))
     for list in matrix:
         list.append(0)
+    return matrix
     
+def del_row(matrix):
+    matrix.pop(-1)
+    for list in matrix:
+        list.pop(-1)
+    return matrix
+
 def matrix_to_list(matrix):
     end_list=[]
     for i,list in enumerate(matrix):
