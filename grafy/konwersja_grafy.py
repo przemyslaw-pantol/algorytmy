@@ -26,7 +26,7 @@ def matrix_to_list(matrix):
     for i,list in enumerate(matrix):
         for  j,number in enumerate(list):
             if number == 1:
-                end_list.append((i+1,j+1))
+                end_list.append((i,j))
     return end_list
 
 def matrix_to_dict(matrix):
@@ -42,13 +42,13 @@ def matrix_to_dict(matrix):
 def list_to_matrix(list):
     matrix=[[0]*len(list) for _ in range(len(list))]
     for x in list:
-        matrix[x[0]-1][x[1]-1]=1
+        matrix[x[0]][x[1]]=1
     return matrix
 
 def list_to_dict(list):
     dict={}
     for i in range(len(list)):
-        dict[i+1] = []
+        dict[i] = []
     for x in list:
         dict[x[0]].append(x[1])
     return dict
@@ -67,6 +67,6 @@ def dict_to_matrix(dict):
     for list in dict:
        key_value=dict.get(list)
        for num in key_value:
-           matrix[list-1][num-1]=1
+           matrix[list][num]=1
     return matrix
 print(matrix_to_dict(matrix))
