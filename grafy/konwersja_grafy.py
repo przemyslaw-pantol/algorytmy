@@ -1,9 +1,8 @@
-
-
 matrix = [
-    [0, 1, 0],
-    [0, 0, 1],
-    [0, 1, 0]
+    [0,1,1,1],
+    [1,0,1,1],
+    [1,1,0,0],
+    [1,1,0,0]
 ]
 
 list=[(1, 2), (2, 3), (3, 2)]
@@ -32,10 +31,12 @@ def matrix_to_list(matrix):
 
 def matrix_to_dict(matrix):
     dict={}
+    for i in range(0,len(matrix)):
+        dict[i]=[]
     for i,list in enumerate(matrix):
         for j,number in enumerate(list):
             if number == 1:
-                dict[i+1] = [j+1]
+                dict[i].append(j)
     return dict
 
 def list_to_matrix(list):
@@ -68,3 +69,4 @@ def dict_to_matrix(dict):
        for num in key_value:
            matrix[list-1][num-1]=1
     return matrix
+print(matrix_to_dict(matrix))
