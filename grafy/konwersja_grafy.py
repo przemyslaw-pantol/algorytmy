@@ -47,10 +47,11 @@ def list_to_matrix(list):
 
 def list_to_dict(list):
     dict={}
-    for i in range(len(list)):
-        dict[i] = []
     for x in list:
-        dict[x[0]].append(x[1])
+        if x[0] in dict:
+            dict[x[0]].append(x[1])
+        else:
+            dict[x[0]] = x[1]
     return dict
 
 def dict_to_list(dict):
