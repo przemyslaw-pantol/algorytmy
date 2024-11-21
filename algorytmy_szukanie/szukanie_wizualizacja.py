@@ -120,3 +120,11 @@ axs[2,1].plot([sum(total_liniowe[0])/RAN_LIS_LEN for _ in range(0,RAN_LIS_LEN+1)
 # Dostosowanie wykresów
 plt.subplots_adjust(hspace=0.3, bottom=0.038, top=0.966,left=0.03,right=0.97)
 plt.show()
+
+
+"""
+Szczególnie przy przeszukiwanu dużych plików szuaknie binarne jest znacznie bardziej efektywne i mniej podatne na kolejność danej w pliku. 
+Przez to, że złożonośc obliczeniowa algorytmu to O(log(n)) ma znacznie mniejszą wariancje od szukania liniowego O(n) i jest od niego kilkaset razy 
+szybsze jest bardziej predysponowane do przeszukiwania danych jedynym mankamentem jest to że dane muszą być posortowane dodatkowo podzielenie danych
+na podgrupy pozwaliło na klikukrotne przespieszenie pracy algorytmu. 
+"""
