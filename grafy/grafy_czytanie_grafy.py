@@ -18,9 +18,10 @@ def graf_plik(file_path):
 def spójność(graf: dict):
     nodes = list(graf.keys())
     for x in graf:
-        for _ in x:
-            if x in nodes:
-                nodes.remove(x)
+        lista=graf.get(x)
+        for y in lista:
+            if y in nodes:
+                nodes.remove(y)
     if len(nodes) == 0:
         return True
     else:
