@@ -15,4 +15,15 @@ def graf_plik(file_path):
                         graf[x[0]].append(y)
     return graf
 
-print(graf_plik(file))
+def spójność(graf: dict):
+    nodes = list(graf.keys())
+    for x in graf:
+        for _ in x:
+            if x in nodes:
+                nodes.remove(x)
+    if len(nodes) == 0:
+        return True
+    else:
+        return False
+
+print(spójność(graf_plik(file)))
