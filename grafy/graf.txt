@@ -1,0 +1,5 @@
+ABC
+BAC
+CAB
+
+DAB
