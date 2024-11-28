@@ -1,5 +1,4 @@
 ABC
 BAC
 CAB
-
 DAB

@@ -16,15 +16,23 @@ def graf_plik(file_path):
     return graf
 
 def spójność(graf: dict):
-    nodes = list(graf.keys())
-    for x in graf:
-        lista=graf.get(x)
-        for y in lista:
-            if y in nodes:
-                nodes.remove(y)
-    if len(nodes) == 0:
-        return True
-    else:
-        return False
+    wierzchołki = list(graf.keys())
+    
+    odwiedzone = []
+    q = []
+    
+    start = wierzchołki[0]
+    odwiedzone.append(start)
+    q.append(start)
+    
+    while q:
+        obecny = q.pop(0)
+        for x in graf.get(obecny):
+            if x not in odwiedzone:
+                odwiedzone.append(x)
+                q.append(x)
 
+    return len(odwiedzone) == len(wierzchołki)
+            
 print(spójność(graf_plik(file)))
+print(graf_plik(file))
