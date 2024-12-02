@@ -26,12 +26,14 @@ def spójność(graf: dict):
     q.append(start)
     
     while q:
-        obecny = q.pop(0)
+        obecny = q[0]
+        print(obecny,odwiedzone,q)
         for x in graf.get(obecny):
             if x not in odwiedzone:
                 odwiedzone.append(x)
                 q.append(x)
 
     return len(odwiedzone) == len(wierzchołki)
-            
+
+print(graf_plik(file))
 print(spójność(graf_plik(file)))
