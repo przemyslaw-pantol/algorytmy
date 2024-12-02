@@ -27,6 +27,7 @@ def spójność(graf: dict):
     
     while q:
         obecny = q[0]
+        q.pop(0)
         for x in graf.get(obecny):
             if x not in odwiedzone:
                 odwiedzone.append(x)
