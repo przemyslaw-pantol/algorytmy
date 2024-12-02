@@ -1,4 +1,4 @@
-file="graf.txt"
+file="graf_2.txt"
 
 def graf_plik(file_path):
     with open(file_path,"r") as file:
@@ -21,7 +21,7 @@ def spójność(graf: dict):
     odwiedzone = []
     q = []
     
-    start = wierzchołki[0]
+    start =wierzchołki[0] 
     odwiedzone.append(start)
     q.append(start)
     
@@ -35,4 +35,3 @@ def spójność(graf: dict):
     return len(odwiedzone) == len(wierzchołki)
             
 print(spójność(graf_plik(file)))
-print(graf_plik(file))
