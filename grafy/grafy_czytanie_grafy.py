@@ -15,13 +15,13 @@ def graf_plik(file_path):
                         graf[x[0]].append(y)
     return graf
 
-def spójność(graf: dict):
+def spójność(graf):
     wierzchołki = list(graf.keys())
     
     odwiedzone = []
     q = []
     
-    start =wierzchołki[0] 
+    start = wierzchołki[0] 
     odwiedzone.append(start)
     q.append(start)
     
