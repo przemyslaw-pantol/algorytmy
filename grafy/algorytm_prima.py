@@ -15,7 +15,7 @@ while len(visited) < len(keys):
     smalest_edge = None
     for x in visited:  # Sprawdzamy wszystkie wierzchołki już odwiedzone
         for y in graf_wagi[x]:  # Przechodzimy po wszystkich sąsiadach
-            if y[0] not in visited:  # Jeśli sąsiad nie został jeszcze odwiedzony
+            if y[0] not in visited: 
                 if smalest_edge is None or y[1] < smalest_edge[2]:
                     smalest_edge = (x, y[0], y[1])  # (wierzchołek_start, wierzchołek_koniec, waga)
 
